@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def titleOfArticle(request):
-	return render(request, 'app/title.html', {})
+	return render(request, 'title_of_article.html', {})
 
 def topList(request):
-	return render(request, 'app/toplist.html', {})
+	return render(request, 'top_list.html', {})

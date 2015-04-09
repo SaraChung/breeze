@@ -1,0 +1,189 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Sample</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+        <link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet">
+       <!--  <link href="{% static "css/bootstrap-combined.min.css" %}" rel="stylesheet"> -->
+		<link href="{% static "css/styles.css" %}" rel="stylesheet">
+	</head>
+
+	<body>
+
+    {% block header_content %}
+
+<div id="header" class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <i class="icon-reorder"></i>
+        </button>
+        <a class="navbar-brand" href="#">
+            Brand
+        </a>
+    </div>
+    <nav class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="#">Navbar Item 1</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navbar Item 2<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Navbar Item2 - Sub Item 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Navbar Item 3</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+            <li class="dropdown">
+                <a href="#" id="nbAcctDD" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>Username<i class="icon-sort-down"></i></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="#">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+    {% endblock %}
+    {% block body_content %}
+
+<div id="wrapper">
+  <div id="sidebar-wrapper" class="col-md-1">
+        <div id="sidebar">
+                <img src="http://placehold.it/120x120" alt="Image" style="max-width:100%;">
+                <div class="humburge-menu">
+                    <a href="#" class="menu-link opened"><i class="fa fa-bars fa-2x"></i></a>
+                    <a href="#" class="menu-search closed"><i class="fa fa-search fa-2x"></i></a>
+                </div>
+                <div class="menu-all">
+                    <div id="search-bar">
+{#                        <div class="col-sm-6">#}
+                            <div id="imaginary_container">
+                                <div class="input-group stylish-input-group">
+                                    <input type="text" class="form-control"  placeholder="Search" >
+                                    <span class="input-group-addon">
+                                        <button type="submit">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </span>
+                                </div>
+{#                            </div>#}
+                        </div>
+                    </div>
+                    <ul class="nav list-group" id="menu-bar">
+                        <li>
+                            <a class="list-group-item" href="#">
+                                <i class="fa fa-envelope-o fa-2x"></i><br>
+                                <i>Nav 1</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item" href="#">
+                                <i class="fa fa-envelope-o fa-2x"></i><br>
+                                <i>Nav 1</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item" href="#">
+                                <i class="fa fa-envelope-o fa-2x"></i><br>
+                                <i>Nav 1</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item" href="#">
+                                <i class="fa fa-envelope-o fa-2x"></i><br>
+                                <i>Nav 1</i>
+                            </a>
+                        </li>
+                    </ul>
+                 </div>
+        </div>
+    </div>
+    <div id="main-wrapper" class="col-md-11 pull-right">
+        <div class="main">
+            <div id="main">
+                <div class="page-header">
+                    {% block right_header %}
+                    {% endblock %}
+                </div>
+                <div class="page-body">
+                    <div>
+                        <img src="http://placehold.it/1176x500" alt="Image" style="max-width:100%;">
+                    </div>
+                    {% block right_content %}
+                    {% endblock %}
+                </div>
+            </div>
+
+            {% block footer %}
+                <div class="footer">
+            <div class="slider-bar">
+                <h3>What to Read Next</h3>
+                <a class="right carousel-control" href="#myCarousel" data-slide="prev" >‹</a>
+                <a class="right carousel-control"></a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+            </div>
+            <div class="row">
+            <div class="span12">
+                <div class="well">
+                    <div id="myCarousel" class="carousel slide">
+
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+
+                    <div class="item active">
+                        <div class="row-fluid">
+                          <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a><a>Related Title 1</a></div>
+                          <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a><a>Related Title 2</a></div>
+                          <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a><a>Related Title 3</a></div>
+                          <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a><a>Related Title 4</a></div>
+                        </div><!--/row-fluid-->
+                    </div><!--/item-->
+
+                    <div class="item">
+                        <div class="row-fluid">
+                            <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a><a>Related Title 5</a></div>
+                            <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a><a>Related Title 6</a></div>
+                            <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a><a>Related Title 7</a></div>
+                            <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a><a>Related Title 8</a></div>
+                        </div><!--/row-fluid-->
+                    </div><!--/item-->
+
+                    <div class="item">
+                        <div class="row-fluid">
+                            <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a><a>Related Title 9</a></div>
+                            <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a><a>Related Title 10</a></div>
+                            <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a><a>Related Title 11</a></div>
+                            <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a><a>Related Title 12</a></div>
+                        </div><!--/row-fluid-->
+                    </div><!--/item-->
+
+                    </div><!--/carousel-inner-->
+                    </div><!--/myCarousel-->
+
+                </div><!--/well-->
+            </div>
+	</div>
+      </div>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+    {% endblock %}
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script type="text/javascript" src="{% static  "js/bootstrap.min.js" %}"></script>
+        <script type="text/javascript" src="{% static  "js/custom.js" %}"></script>
+
+	</body>
+</html>
