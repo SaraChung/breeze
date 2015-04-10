@@ -6,9 +6,10 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Sample</title>
+		<title>Breeze</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 		<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
         <link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet">
         <link href="{% static "css/bootstrap-combined.min.css" %}" rel="stylesheet">
@@ -19,48 +20,13 @@
 
     {% block header_content %}
 
-<div id="header" class="navbar navbar-default navbar-fixed-top">
-    <div class="navbar-header">
-        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-            <i class="icon-reorder"></i>
-        </button>
-        <a class="navbar-brand" href="#">
-            Brand
-        </a>
-    </div>
-    <nav class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-            <li>
-                <a href="#">Navbar Item 1</a>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navbar Item 2<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Navbar Item2 - Sub Item 1</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Navbar Item 3</a>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav pull-right">
-            <li class="dropdown">
-                <a href="#" id="nbAcctDD" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>Username<i class="icon-sort-down"></i></a>
-                <ul class="dropdown-menu pull-right">
-                    <li><a href="#">Log Out</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</div>
-
     {% endblock %}
     {% block body_content %}
 
 <div id="wrapper">
   <div id="sidebar-wrapper" class="col-md-1">
         <div id="sidebar">
-                <img src="../static/img/groupthink.jpg" alt="Image" style="max-width:100%;">
+                <img src="/static/img/groupthink.jpg" alt="Image" style="max-width:100%;">
                 <div class="humburge-menu">
                     <a href="#" class="menu-link opened"><i class="fa fa-bars fa-2x"></i></a>
                     <a href="#" class="menu-search closed"><i class="fa fa-search fa-2x"></i></a>
@@ -83,26 +49,26 @@
                     <ul class="nav list-group" id="menu-bar">
                         <li>
                             <a class="list-group-item" href="#">
-                                <i class="fa fa-envelope-o fa-2x"></i><br>
-                                <i>Nav 1</i>
+                                <i class="fa fa-newspaper-o fa-2x"></i><br>
+                                <i>News</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item" href="/top">
+                                <i class="fa fa-book fa-2x"></i><br>
+                                <i>Blog</i>
                             </a>
                         </li>
                         <li>
                             <a class="list-group-item" href="#">
-                                <i class="fa fa-envelope-o fa-2x"></i><br>
-                                <i>Nav 1</i>
+                                <i class="fa fa-camera-retro fa-2x"></i><br>
+                                <i>Videos</i>
                             </a>
                         </li>
                         <li>
                             <a class="list-group-item" href="#">
-                                <i class="fa fa-envelope-o fa-2x"></i><br>
-                                <i>Nav 1</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="list-group-item" href="#">
-                                <i class="fa fa-envelope-o fa-2x"></i><br>
-                                <i>Nav 1</i>
+                                <i class="fa fa-users fa-2x"></i><br>
+                                <i>Contact</i>
                             </a>
                         </li>
                     </ul>
